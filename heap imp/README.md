@@ -1,4 +1,4 @@
-Author: Omar Ben Ismil
+Author: Omar Ben Ismail
 
 Description: This is a D3 implementation of an array simulated dary-heap. This project's code is based on the opendatastructes.org algorithms and Robin Ladiges heap implementation.
 
