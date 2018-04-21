@@ -1,5 +1,5 @@
 /*
-	- d3 display implementation of a treap based on Robin Ladiges.
+	- d3 display implementation of a treap based on the opendatastructes.org algorithms and Robin Ladiges dheap implementation.
 */
 
 // global variables
