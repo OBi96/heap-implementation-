@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <title>Heap Project</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/993E81BC-3FB5-9A41-AD14-5E29C5E22D25/main.js" charset="UTF-8"></script><script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="util.js"></script>
+    <script src="minDHeap.js"></script>
+		<script src="maxDHeap.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body onload="init();">
+    <div id="title">
+		Honours Project Heap
+    </div>
+    
+    <!-- Navigation -->
+    <div id="navi">
+        <!-- chooses max or min -->
+        <div style="background-color: #999;">
+            <input id="rbMax" type="radio" name="radioOnClick" value="max"/> max heap
+            <br /><input id="rbMin" type="radio" name="radioOnClick" value="min" checked="checked" /> min heap 
+						<br /> <input id="swap" type="button" value="change" onclick="changeHeap();" />        
+					</div>
+				<!-- Random -->
+				<div style="background-color: #999;">
+            <input id="textRndD" type="text"  /> degree          <br />
+            <input id="textRndN" type="text"  /> node count            <br />
+            <input id="butRandom" type="button" value="make random heap" onclick="randomHeap();" />
+        </div>
+        <!-- add -->
+				<div style="background-color: #999;">
+            <input id="textInsert" type="text" />
+            <br /><input id="butInsert" type="button" value="add" onclick="doInsert();" />
+        </div>
+				<!-- change D -->
+        <div style="background-color: #999;">
+            <input id="textChangeD" type="text" />
+            <br /><input id="butChangeD" type="button" value="change degree" onclick="changeD();" />
+        </div>
+				
+        <!-- remove Top node -->
+				<div style="background-color: #999;">
+            <input id="butRemove" type="button" value="remove" onclick="removeTop();" />  remove        
+					</div>
+        
+    </div>
+
+		<div>
+        <svg id="svg" width="800" height="450">
+            <g transform="translate(20,20)"></g>
+        </svg>
+    </div>
+		<!-- control speed -->
+		<div style="background-color: #999;">speed controller - slow
+			<input id="speedSlider" type="range" min="-71" max="0" step="1" onchange="changeVal()"/>
+			fast -
+		</div>
+		<!-- array representation -->
+		Array representation of Heap:
+		<div>
+        <svg id="svg2" width="900" height="100">
+            <g transform="translate(20,20)"></g>
+        </svg>
+    </div>
+		<div style="background-color: #999;">
+      Instructions: <br />
+			Select one of the "max" or "min" radio buttons then pressing the change button to changing heap type.<br />
+			Selecting a degree (number of children) and a node count will generate a heap with those specifications (if left empty a random number will be picked). <br />
+			The change degree button will create a new heap with the selected number of children.<br />
+			The add button adds elements to the heap.<br />
+			The remove button removes the top element of the heap.<br />
+			On the array in the array representation section: Use the mouse to pan (click and move) / zoom (scrollwheel)
+    </div>
+  </body>
+</html>
